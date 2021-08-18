@@ -11,9 +11,6 @@ UK_PLATS ?= $(PWD)/../../plats
 LIBS-y                  := $(UK_LIBS)/libelf
 LIBS-$(WITH_ZYDIS)      := $(LIBS-y):$(UK_LIBS)/zydis
 LIBS-$(WITH_LWIP)       := $(LIBS-y):$(UK_LIBS)/lwip
-LIBS-$(WITH_TLSF)       := $(LIBS-y):$(UK_LIBS)/tlsf
-LIBS-$(WITH_MUSL)       := $(LIBS-y):$(UK_LIBS)/musl
-LIBS-$(WITH_NEWLIB)     := $(LIBS-y):$(UK_LIBS)/newlib
 PLATS-y                 :=
 
 all:
