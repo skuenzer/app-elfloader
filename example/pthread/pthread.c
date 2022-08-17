@@ -6,6 +6,12 @@ static void *thread_fn(void *argp)
 {
 	printf("Hello from thread!\n");
 	fflush(stdout);
+	sleep(1);
+	printf("Tick!\n");
+	fflush(stdout);
+	sleep(1);
+	printf("Tack!\n");
+	fflush(stdout);
 }
 
 int main(int argc, char *argv[])
@@ -21,5 +27,7 @@ int main(int argc, char *argv[])
 		fflush(stdout);
 		exit(1);
 	}
+	fflush(stdout);
+	wait();
 	fflush(stdout);
 }
