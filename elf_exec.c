@@ -143,5 +143,5 @@ void ctx_elf(struct ukarch_ctx *ctx, struct elf_prog *prog,
 	 * code to be executed at exit (if != 0), however we are not using it
 	 * and here it contains some garbage value, so clear it
 	 */
-	ukarch_ctx_init_entry0(ctx, ctx->sp, 0x0, (ukarch_ctx_entry0) prog->entry);
+	ukarch_ctx_init(ctx, ctx->sp, 0x0, prog->entry);
 }
