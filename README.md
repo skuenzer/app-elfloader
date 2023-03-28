@@ -1,5 +1,27 @@
 # Unikraft ELF Loader
 
+## Building the ELF Loader unikernel
+
+`elfloader` can be built using the provided `Makefile`.
+
+Make sure the source code for [Unikraft](https://github.com/unikraft/unikraft),
+[libelf](https://github.com/unikraft/lib-libelf) and
+[lwip](https://github.com/unikraft/lib-lwip) is available at the paths
+referenced by the `UK_ROOT` and `UK_LIBS` variables respectively. Execute the
+`make menuconfig` command to enter the configuration dialog, select a target
+platform (e.g. "KVM"), and exit to generate the unikernel configuration.
+
+Executing `make` a second time triggers a build of the unikernel for the
+selected platform(s). The resulting artifacts are available inside the `build/`
+directory (e.g. `build/app-elfloader_kvm-x86_64`).
+
+Under `example/helloworld` you can find an example application that you can
+use with the ELF Loader app. Just type `make` to compile it.
+
+Please refer to [Getting Started with
+Unikraft](https://unikraft.org/docs/getting-started/) for further details about
+the Unikraft build process and the available configuration options.
+
 ## Executing ELF binaries
 
 `elfloader` currently supports statically linked position-independent (PIE)
